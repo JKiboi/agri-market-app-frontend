@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../styles/FarmerDashboard.css";
 import counties from "../../data";
 import { Card, Button } from "react-bootstrap";
+import config from "../../config/config";
 
 function FarmerDashboard() {
   const [farmers, setFarmers] = useState([]);
@@ -18,7 +19,7 @@ function FarmerDashboard() {
   });
 
   useEffect(() => {
-    fetch("/api/farmers")
+    fetch(`${config.backendUrl}/api/farmers`)
       .then((res) => res.json())
       .then((data) => setFarmers(data))
       .catch((err) => console.log(err));
@@ -55,7 +56,7 @@ function FarmerDashboard() {
       formDataToSend.append(key, formData[key]);
     }
     try {
-      const res = await fetch(`/api/farmers`, {
+      const res = await fetch(`${config.backendUrl}/api/farmers`, {
         method: "POST",
         body: formDataToSend,
       });
@@ -79,7 +80,7 @@ function FarmerDashboard() {
 
   const onDelete = async (id) => {
     try {
-      await fetch(`/api/farmers/${id}`, {
+      await fetch(`${config.backendUrl}/api/farmers/${id}`, {
         method: "DELETE",
       });
       setFarmers(farmers.filter((farmer) => farmer._id !== id));
@@ -94,7 +95,7 @@ function FarmerDashboard() {
       formDataToSend.append(key, formData[key]);
     }
     try {
-      const res = await fetch(`/api/farmers/${id}`, {
+      const res = await fetch(`${config.backendUrl}/api/farmers/${id}`, {
         method: "PUT",
         body: formDataToSend,
       });
@@ -108,8 +109,8 @@ function FarmerDashboard() {
         name: "",
         phoneNumber: "",
         productName: "",
-        productImage: null, // updated type to File and set default value to null
-        productVideo: null, // updated type to File and set default value to null
+        productImage: null,
+        productVideo: null,
         pricePerUnit: "",
         county: "",
         subCounty: "",

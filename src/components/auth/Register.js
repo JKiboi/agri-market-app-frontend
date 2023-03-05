@@ -1,7 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import "../../styles/Register.css"
+import config from '../../config/config';
+import '../../styles/Register.css';
 
 function Register() {
   const { register, handleSubmit } = useForm();
@@ -9,7 +10,7 @@ function Register() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch(`/api/users`, {
+      const response = await fetch(`${config.backendUrl}/api/users`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
