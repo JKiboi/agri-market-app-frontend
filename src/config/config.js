@@ -1,6 +1,6 @@
 const config = {
     development: {
-      backendUrl: 'http://localhost:5000'
+      backendUrl: 'http://localhost:8000'
     },
     production: {
       backendUrl: 'https://mern-agri-market-app-api.onrender.com'
