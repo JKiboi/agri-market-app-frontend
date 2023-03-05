@@ -1,0 +1,95 @@
+.footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer__subscribe {
+    width: 30%;
+  }
+  
+  .footer__subscribe h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .footer__subscribe input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .footer__subscribe button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .footer__links {
+    width: 20%;
+  }
+  
+  .footer__links h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .quick_links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quick_links a {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  .footer__social-media {
+    width: 20%;
+  }
+  
+  .footer__social-media h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .social-media {
+    display: flex;
+  }
+  
+  .social-media a {
+    color: #333;
+    font-size: 24px;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .footer__copyright {
+    width: 30%;
+    text-align: right;
+  }
+  
+  .footer__copyright p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
